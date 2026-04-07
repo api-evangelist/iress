@@ -27,8 +27,8 @@ apis:
       80+ sources.
     humanURL: https://www.iress.com/software/trading-and-market-data/api-data-trading-solutions/quantfeed/
     tags:
-      - Market Data
       - Financial Data
+      - Market Data
       - Trading
     properties:
       - type: Documentation
