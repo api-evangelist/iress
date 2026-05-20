@@ -34,6 +34,10 @@ apis:
       - type: Documentation
         url: https://www.iress.com/software/trading-and-market-data/api-data-trading-solutions/quantfeed/
 common:
+  - type: GitHubOrganization
+    url: https://github.com/iress
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/iress
   - type: Website
     url: https://www.iress.com/
 maintainers:
