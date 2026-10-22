@@ -1,0 +1,58 @@
+generated: '2026-10-21'
+method: searched
+source:
+- https://api.iressopen.com.au/swagger/3.0/swagger.json
+- https://community.iress.com/ic/discussion/102962/authentication-overview
+- https://community.iress.com/ic/discussion/102964/access-and-authorisation-overview
+- https://github.com/iress/iress-xplan-api-examples/blob/main/2FA_TECHNICAL_DOC.md
+docs: https://community.iress.com/ic/discussion/102962/authentication-overview
+description: 'Iress Open (Xplan REST API) authentication. The Swagger contract declares HTTP Basic (Xplan credentials)
+  together with two required headers: the integrator API key (x-xplan-app-id) and the target Xplan site (x-forwarded-host).
+  The community docs state OAuth 2.0 Authorisation Code Grant is the preferred mechanism and that Basic is supported
+  but discouraged. Keys are provisioned by Iress through the Iress API Key Portal (gated).'
+schemes:
+- name: BasicAuth
+  type: http
+  scheme: basic
+  description: Your XPLAN Credentials
+  source: https://api.iressopen.com.au/swagger/3.0/swagger.json
+  docs_note: HTTP Basic Authentication is also supported but discouraged due to the necessity to store user credentials.
+  two_factor: When 2FA is mandatory the OTP is appended to the password, separated by \n\r\t\u0007, i.e. Base64
+    of USER:PASSWORD\n\r\t\u0007OTP; after the session is established use the XPLANID session cookie instead of
+    the Authorization header.
+  two_factor_source: https://github.com/iress/iress-xplan-api-examples/blob/main/2FA_TECHNICAL_DOC.md
+- name: APIKey
+  type: apiKey
+  in: header
+  header: x-xplan-app-id
+  description: Your integrator's API Key
+  source: https://api.iressopen.com.au/swagger/3.0/swagger.json
+- name: Target Xplan Site
+  type: apiKey
+  in: header
+  header: x-forwarded-host
+  description: Target Xplan site to authorise against
+  source: https://api.iressopen.com.au/swagger/3.0/swagger.json
+- name: OAuth 2.0
+  type: oauth2
+  flow: authorizationCode
+  description: Iress API Keys use OAuth 2.0 (Authorisation Code Grant) as their preferred authentication mechanism.
+  session: Once initially established an Xplan session can be maintained for a maximum of one hour before the need
+    to re-authenticate.
+  refresh: Iress also support a refresh process whereby a new session can be established programmatically
+  declared_in_contract: false
+  source: https://community.iress.com/ic/discussion/102962/authentication-overview
+authorization:
+  model: capabilities
+  description: Authorisation is managed primarily by capabilities, with one set attached to an API Key working in
+    conjunction with those allocated to the Xplan User account connecting to the API.
+  source: https://community.iress.com/ic/discussion/102964/access-and-authorisation-overview
+key_management:
+  portal: Iress API Key Portal (community category iressapiportal; redirects to auth.id.iress.com login)
+  redirect_uris: Iress API keys can be connected to multiple Xplan sites but we support a single redirect URI.
+  source: https://community.iress.com/ic/discussion/102962/authentication-overview
+legacy:
+- api: Iress Web Services V4 (SOAP)
+  description: 'Session-based: IressSessionStart / ServiceSessionStart request with username@company and password
+    or SAML token (per the Method Reference form and sample XML).'
+  source: https://webservices.iress.com.au/v4/Documentation/MethodReference.aspx

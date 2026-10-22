@@ -1,0 +1,94 @@
+generated: '2026-10-21'
+method: searched
+probe: true
+source: https://www.iress.com/resources/legal/data-protection/
+signals:
+  data_subject_request:
+    url: https://www.iress.com/resources/legal/privacy/
+    section: Access and correction
+    rights_named: [access, correction, copies, withdrawal of consent, deletion (per jurisdiction), portability (certain countries), objection to automated decision making (certain countries)]
+    channel: people@iress.com (withdrawal of consent)
+    evidence:
+    - source: https://www.iress.com/resources/legal/privacy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: You have the right to access, request corrections to and copies of the personal information we hold about you.
+    - source: https://www.iress.com/resources/legal/data-protection/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        In certain countries in which we operate, data subjects have additional rights, including: (i) the right to obtain from Iress a copy of all personal information which the data subject has provided to the controller in a structured, electronic format that is commonly used and which permits further use by the data subject (known as data portability); (ii) the right not to be subject to automated decision making, including profiling;
+    - source: https://www.iress.com/resources/legal/data-protection/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        Should a request be received related to Iress’ processing of personal data on behalf of an Iress client these will be forwarded promptly to our clients in accordance with our contractual obligations.
+    note: >-
+      The privacy notice grants access/correction/copy rights; the Global data protection policy (section 8, "Dealing with data
+      subject rights requests") routes requests to the legal/privacy team and forwards processor-side requests to the client
+      controller. No response SLA is stated.
+  subprocessors:
+    url: https://www.iress.com/resources/legal/data-protection/
+    section: Global data protection policy
+    list_published: false
+    evidence:
+    - source: https://www.iress.com/resources/legal/data-protection/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        Where we appoint another party to process personal information on our behalf we will put in place a contract with that other party which imposes certain obligations on them, including obligations to comply with security requirements, to process personal information only in accordance with our instructions, and not to engage further sub-processors without Iress’ consent.
+    note: >-
+      Establishes contractual flow-down to sub-processors and a consent gate on onward sub-processing. No public sub-processor
+      list was found on the pages read.
+  data_residency:
+    url: https://www.iress.com/resources/legal/privacy/
+    evidence:
+    - source: https://www.iress.com/resources/legal/privacy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        We may disclose your information to members of our corporate group located overseas. Countries in which we are based include Australia, the United Kingdom, Singapore, Malaysia, Hong Kong, South Africa, New Zealand and Canada. We have appropriate controls in place in relation to intra-group transfers.
+    - source: https://www.iress.com/resources/legal/data-protection/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: The rules in each jurisdiction are different, and a brief summary is below. Iress will ensure that suitable transfer mechanisms are in place for all international transfers of personal information.
+    note: >-
+      No residency commitment; the posture is cross-border transfer with mechanisms (adequacy, SCCs/ICO clauses, transfer risk
+      assessments) described per jurisdiction (UK/EEA, Australia, South Africa, Canada, Singapore, New Zealand) in section 7.
+      The privacy notice also says data may go to countries "including without limitation to the US".
+  incident_notification:
+    url: https://www.iress.com/resources/legal/iress-information-security-policy/
+    section: 3 Notification
+    stated_window: 72 hours (where reasonably practicable)
+    evidence:
+    - source: https://www.iress.com/resources/legal/iress-information-security-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        Iress shall, as soon as possible (and where reasonably practicable within 72 hours after becoming aware) notify the Customer of:
+    note: >-
+      Customer-facing commitment covering a Security Incident and a Security Control Weakness, defined in the same policy against
+      Input Data. The policy also states the ISMS is aligned with ISO/IEC 27001:2022 "or equivalent international standard".
+  ai_transparency:
+    url: https://www.iress.com/resources/legal/data-protection/
+    section: 9. Use of Artificial Intelligence (AI)
+    evidence:
+    - source: https://www.iress.com/resources/legal/data-protection/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        We may use the data that we hold to support AI model training where we have the necessary permissions, or where data is anonymised in a manner to remove any link to, or potential impact on, individual data subjects.
+    note: >-
+      Discloses use of AI tools in products and internal operations and that held data may be used for model training with
+      permission or after anonymisation. Not an AI-interaction disclosure and names no models.
+  data_retention:
+    url: https://www.iress.com/resources/legal/privacy/
+    section: Data Retention and past employees
+    schedule_published: false
+    evidence:
+    - source: https://www.iress.com/resources/legal/privacy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        We will only retain your personal information for as long as necessary to fulfil the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements. Details of retention periods for different aspects of your personal information are available on request.
+    note: Purpose-limited retention; specific retention periods are not published, only available on request.

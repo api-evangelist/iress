@@ -1,0 +1,24 @@
+generated: '2026-10-21'
+method: searched
+source:
+- https://api.iressopen.com.au/swagger/3.0/swagger.json
+- https://community.iress.com/ic/discussion/102962/authentication-overview
+standards:
+- id: openapi
+  conforms: true
+  version: 2.0 (Swagger)
+  evidence: 'https://api.iressopen.com.au/swagger/3.0/swagger.json declares "swagger": "2.0"'
+- id: oauth2
+  conforms: true
+  evidence: '"Iress API Keys use OAuth 2.0 (Authorisation Code Grant) as their preferred authentication mechanism."
+    (https://community.iress.com/ic/discussion/102962/authentication-overview); not declared in the Swagger securityDefinitions'
+- id: rfc9457
+  conforms: false
+  evidence: Error responses use a custom {StatusCode, Message} MessageResponseModel, not application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: No Idempotency-Key header on any write operation in the 3.0 contract
+- id: pagination
+  conforms: true
+  style: cursor
+  evidence: Bookmark + PageSize query parameters on list operations (e.g. GetClientListV3)

@@ -1,0 +1,124 @@
+generated: '2026-10-21'
+method: searched
+source:
+- https://registry.npmjs.org/-/v1/search?text=iress
+- https://api.github.com/orgs/iress/repos
+- https://pypi.org/pypi/iress/json
+- https://azuresearch-usnc.nuget.org/query?q=iress
+note: 'No first-party API client SDK was found for Iress Open (Xplan REST), Iress Sourcing APIs or Web Services
+  V4 (SOAP): PyPI "iress" and "iress-xplan" return 404, NuGet search for "iress" returns 0 hits, and PyPI "xplan"
+  is a third-party package (author shinhwagk), not Iress. The first-party packages below are the Iress Design System
+  UI libraries and one utility, published by the iress GitHub org. Integration samples (not packages) live in github.com/iress/iress-xplan-api-examples
+  (Python, Xplan RAPI/EDAI auth), iress/webservices-v4-docs (C#, Python, SOAP XML) and iress/iress-pro-com-api-samples
+  (Desktop COM API).'
+packages:
+- name: '@iress-oss/ids-components'
+  registry: npm
+  url: https://www.npmjs.com/package/@iress-oss/ids-components
+  language: javascript
+  official: true
+  version: 6.4.2
+  published: '2026-10-21'
+  license: Apache-2.0
+  kind: ui-component-library
+  description: React components that implement the Iress Design System
+  source_repo: https://github.com/iress/design-system
+- name: '@iress-oss/ids-tokens'
+  registry: npm
+  url: https://www.npmjs.com/package/@iress-oss/ids-tokens
+  language: javascript
+  official: true
+  version: 6.0.0
+  published: '2026-06-09'
+  license: null
+  kind: ui-component-library
+  description: Design tokens for the Iress Design System
+  source_repo: https://github.com/iress/design-system
+- name: '@iress-oss/ids-theme-preset'
+  registry: npm
+  url: https://www.npmjs.com/package/@iress-oss/ids-theme-preset
+  language: javascript
+  official: true
+  version: 6.0.1
+  published: '2026-10-21'
+  license: Apache-2.0
+  kind: ui-component-library
+  description: Panda CSS preset for the Iress Design System
+  source_repo: https://github.com/iress/design-system
+- name: '@iress-oss/ids-mcp-server'
+  registry: npm
+  url: https://www.npmjs.com/package/@iress-oss/ids-mcp-server
+  language: javascript
+  official: true
+  version: 5.20.6
+  published: '2026-02-12'
+  license: Apache-2.0
+  kind: ui-component-library
+  description: Model Context Protocol (MCP) server for the Iress Design System (IDS) component library
+  source_repo: https://github.com/iress/design-system
+- name: '@iress-oss/ids-storybook-config'
+  registry: npm
+  url: https://www.npmjs.com/package/@iress-oss/ids-storybook-config
+  language: javascript
+  official: true
+  version: 0.6.0
+  published: '2026-03-27'
+  license: null
+  kind: ui-component-library
+  description: Shared Storybook configuration for IDS packages
+  source_repo: https://github.com/iress/design-system
+- name: '@iress-oss/ids-storybook-okta'
+  registry: npm
+  url: https://www.npmjs.com/package/@iress-oss/ids-storybook-okta
+  language: javascript
+  official: true
+  version: 0.1.2
+  published: '2025-12-11'
+  license: Apache-2.0
+  kind: ui-component-library
+  description: Storybook addon for integrating Okta authentication into Storybook
+  source_repo: https://github.com/iress/design-system
+- name: '@iress-oss/ids-storybook-sandbox'
+  registry: npm
+  url: https://www.npmjs.com/package/@iress-oss/ids-storybook-sandbox
+  language: javascript
+  official: true
+  version: 0.2.2
+  published: '2026-01-02'
+  license: Apache-2.0
+  kind: ui-component-library
+  description: Storybook addon for opening code examples in CodeSandbox
+  source_repo: https://github.com/iress/design-system
+- name: '@iress-oss/ids-storybook-toggle-stories'
+  registry: npm
+  url: https://www.npmjs.com/package/@iress-oss/ids-storybook-toggle-stories
+  language: javascript
+  official: true
+  version: 0.1.0
+  published: '2025-12-02'
+  license: Apache-2.0
+  kind: ui-component-library
+  description: Storybook addon for toggling the visibility of stories
+  source_repo: https://github.com/iress/design-system
+- name: '@iress-oss/ids-storybook-version-badge'
+  registry: npm
+  url: https://www.npmjs.com/package/@iress-oss/ids-storybook-version-badge
+  language: javascript
+  official: true
+  version: 0.1.1
+  published: '2025-12-11'
+  license: Apache-2.0
+  kind: ui-component-library
+  description: Storybook addon for displaying version badges
+  source_repo: https://github.com/iress/design-system
+- name: '@iress/middy-http-path-router'
+  registry: npm
+  url: https://www.npmjs.com/package/@iress/middy-http-path-router
+  language: javascript
+  official: true
+  version: 0.2.0
+  published: '2023-11-08'
+  license: MIT
+  kind: utility
+  description: Routing middleware for Middy that provides path parameters in the event
+  source_repo: https://github.com/iress/iress-middy-http-path-router

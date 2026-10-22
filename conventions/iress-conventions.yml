@@ -1,0 +1,72 @@
+generated: '2026-10-21'
+method: searched
+source:
+- https://api.iressopen.com.au/swagger/3.0/swagger.json
+- https://community.iress.com/ic/discussion/102960/iress-open-standard-overview
+- https://community.iress.com/ic/discussion/102964/access-and-authorisation-overview
+auth:
+  style: HTTP Basic or OAuth 2.0 bearer, plus x-xplan-app-id and x-forwarded-host headers
+  see: authentication/iress-authentication.yml
+versioning:
+  style: header
+  header: x-api-version
+  required: true
+  default: '3.0'
+  current: '3.0'
+  deprecated:
+  - '2.0'
+  - '1.0'
+  evidence: Every operation in the 3.0 contract requires header x-api-version (default "3.0"); the Swagger UI lists
+    "2.0 (DEPRECATED)" and "1.0 (DEPRECATED)" (1.0 on the AU host only).
+  see: lifecycle/iress-lifecycle.yml
+pagination:
+  style: cursor (bookmark)
+  params:
+  - Bookmark
+  - PageSize
+  default_page_size: 50
+  response_fields:
+  - bookmark (on each item, e.g. BookmarkableClient)
+  evidence: 'Bookmark: "Bookmark of the previous item, to allow you to select the next set of items (leave blank
+    to get the first set)"; PageSize: "The number of items to select (default value : 50)". Some operations also
+    accept PageNumber.'
+  source: https://api.iressopen.com.au/swagger/3.0/swagger.json
+request_id:
+  headers:
+  - x-Iress-RequestId
+  - x-amz-apigw-id
+  - x-amzn-RequestId
+  evidence: Iress Request Id. When reporting an error to Iress, please provide this ID along with details of the
+    request you were making.
+error_envelope:
+  schema: IressOpen.API.Common.Models.MessageResponseModel
+  fields:
+  - StatusCode
+  - Message
+  problem_json: false
+  see: errors/iress-problem-types.yml
+aggregation:
+  description: Iress utilizes a Backend For Frontend (BFF) layer to simplify Xplan connectivity. This layer logically
+    groups existing API calls, reducing traffic between the integrator and Xplan.
+  source: https://community.iress.com/ic/discussion/102960/iress-open-standard-overview
+options_endpoints: Each resource exposes a .../options GET (e.g. GetClientOptionsV3) returning allowed field values.
+rate_limit_signaling:
+  documented: false
+  note: No 429 response, rate-limit headers or Retry-After are declared in the contract.
+  see: rate-limits/iress-rate-limits.yml
+idempotency:
+  coverage: none
+  description: No Idempotency-Key or equivalent replay-protection header is declared on any of the 47 POST/PATCH
+    operations (or 23 DELETE operations) in the 3.0 contract, and the docs read do not describe one.
+reversibility:
+  status: none-documented
+  write_surface: 24 POST (create), 23 PATCH (modify), 23 DELETE (remove) operations on Xplan client records (AU
+    3.0).
+  reversal_operations: []
+  note: No undo, restore or reversal operation and no recovery window is documented. DELETE operations remove records;
+    DeleteClientV3 is marked "INTERNAL IRESS USE ONLY". "(*) - some restrictions apply to verbs allowed" for Document
+    Note and Portfolio.
+  source: https://community.iress.com/ic/discussion/102960/iress-open-standard-overview
+dry_run_mode:
+  supported: false
+  note: Not documented.

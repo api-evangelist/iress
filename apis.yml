@@ -1,11 +1,16 @@
 aid: iress
+
 name: Iress
-description: >-
-  Iress is a technology company providing software for financial markets,
-  wealth management, and trading. Iress QuantFeed is a signature end-to-end
-  ultra-low latency market data API that connects over 240 normalized market
-  data feeds from 80+ sources.
+
+description: Iress is a technology company providing software to the financial services industry, used by more than
+  10,000 businesses and 500,000 users. Its products span financial advice (Xplan and Xplan Integrations), trading
+  and market data (Iress Pro, Viewpoint, FIX, order and institutional trading systems, real-time market data from
+  100+ markets), investment management, and UK mortgage and protection sourcing (The Exchange, Xplan Mortgage, Trigold),
+  whose Sourcing APIs let platforms integrate Iress sourcing data. Iress sold its QuantHouse business (QuantFeed
+  market data API) to BAHA Tech Holding AG, and the former QuantFeed page on iress.com now returns 404.
+
 type: Index
+
 deliveryModel:
   model: unknown
   open_source: false
@@ -17,6 +22,7 @@ deliveryModel:
   - none
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: freemium
   onboarding: unknown
@@ -29,50 +35,165 @@ accessModel:
   - plans
   generated: '2026-07-22'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/iress.png
+
 tags:
+- Financial Data
+- Market Data
+- Trading
+- Wealth Management
+- Financial Advice
+- Mortgages
+- Insurance
+- FinTech
+
+created: '2025-02-12'
+
+modified: '2026-10-21'
+
+url: https://raw.githubusercontent.com/api-evangelist/iress/refs/heads/main/apis.yml
+
+specificationVersion: '0.23'
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+
+common:
+- type: Components
+  url: components/iress-components.yml
+- type: Conventions
+  url: conventions/iress-conventions.yml
+- type: Authentication
+  url: authentication/iress-authentication.yml
+- type: Lifecycle
+  url: lifecycle/iress-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/iress-problem-types.yml
+- type: Conformance
+  url: conformance/iress-conformance.yml
+- type: LLMsTxt
+  url: llms/iress-llms.txt
+- type: Hosts
+  url: hosts/iress-hosts.yml
+- type: IntegrationEdges
+  url: integrations/iress-integration-edges.yml
+- type: Vendors
+  url: vendors/iress-vendors.yml
+- type: SDKs
+  url: packages/iress-packages.yml
+- type: Packages
+  url: packages/iress-packages.yml
+- type: Newsroom
+  url: https://www.iress.com/media/documents/Complaints_Policy_v1.1_June_2026.pdf
+- type: Documentation
+  url: https://help.iress.com/
+- type: Plans
+  url: plans/iress-plans-pricing.yml
+- type: FinOps
+  url: finops/iress-finops.yml
+- url: https://www.iress.com/blog/
+  type: Blog
+- type: DomainSecurity
+  url: security/iress-domain-security.yml
+- type: GitHubOrganization
+  url: https://github.com/iress
+- type: LinkedIn
+  url: https://www.linkedin.com/company/iress
+- type: Website
+  url: https://www.iress.com/
+- type: Login
+  url: https://www.iress.com/sign-in/
+- type: PrivacyPolicy
+  url: https://www.iress.com/resources/legal/privacy/
+- type: TermsOfService
+  url: https://www.iress.com/trust/website-terms/
+- type: Support
+  url: https://www.iress.com/support/software-support/
+- type: HelpCenter
+  url: https://help.iress.com/Default.htm
+- type: Forum
+  url: https://community.iress.com/
+- type: TrustCenter
+  url: https://www.iress.com/trust/
+- type: Legal
+  url: https://www.iress.com/resources/legal/
+- type: Contact
+  url: https://www.iress.com/contact/
+
+apis:
+- aid: iress:iress-sourcing-apis
+  name: Iress Sourcing APIs
+  description: Iress Sourcing APIs bring the UK mortgage and protection sourcing data behind The Exchange, Xplan
+    Mortgage and Trigold directly into a CRM, platform or website. Access is arranged with Iress; no public base
+    URL is published.
+  humanURL: https://www.iress.com/software/sourcing/apis-and-integrations/
+  tags:
+  - Mortgages
+  - Insurance
   - Financial Data
+  properties:
+  - type: Documentation
+    url: https://www.iress.com/software/sourcing/apis-and-integrations/
+- aid: iress:xplan-integrations
+  name: Xplan Integrations
+  description: Xplan Integrations connect Iress Xplan financial advice software to third-party applications, either
+    through standard integrations that use an app key with the client's permission or through customised integrations.
+  humanURL: https://www.iress.com/software/financial-advice/xplan-integrations/
+  tags:
+  - Financial Advice
+  - Wealth Management
+  - Integrations
+  properties:
+  - type: Documentation
+    url: https://www.iress.com/software/financial-advice/xplan-integrations/
+- aid: iress:iress-web-services-v4
+  name: Iress Web Services V4
+  description: Iress Web Services V4 is a SOAP XML document/literal web service used to access IRESS market data
+    and Web Admin, IOS+ (Iress Order Management System), IPS (Iress Portfolio System) and FIX+ Administrator. The
+    full WSDL and method reference are generated per user behind an IRESS login at webservices.iress.com.au; Iress
+    publishes the IRESS and IOS+ WSDLs used by its C# sample in the iress/webservices-v4-docs GitHub repository.
+  humanURL: https://github.com/iress/webservices-v4-docs
+  baseURL: https://webservices.iress.com.au/v4/SOAP.aspx
+  tags:
   - Market Data
   - Trading
-  - Wealth Management
-created: '2025-02-12'
-modified: '2026-10-06'
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/iress/refs/heads/main/apis.yml
-specificationVersion: '0.23'
-apis:
-  - aid: iress:iress-quantfeed
-    name: Iress QuantFeed
-    description: >-
-      QuantFeed is Iress's signature end-to-end ultra-low latency market data
-      API. Built to deliver an unmatched level of performance and quality of
-      normalisation, QuantFeed connects 240+ normalised market data feeds from
-      80+ sources.
-    humanURL: https://www.iress.com/software/trading-and-market-data/api-data-trading-solutions/quantfeed/
-    tags:
-      - Financial Data
-      - Market Data
-      - Trading
-    properties:
-      - type: Documentation
-        url: https://www.iress.com/software/trading-and-market-data/api-data-trading-solutions/quantfeed/
-common:
-  - type: Plans
-    url: plans/iress-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/iress-rate-limits.yml
-  - type: FinOps
-    url: finops/iress-finops.yml
-  - url: https://www.iress.com/blog/
-    type: Blog
-  - type: DomainSecurity
-    url: security/iress-domain-security.yml
-  - type: GitHubOrganization
-    url: https://github.com/iress
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/iress
-  - type: Website
-    url: https://www.iress.com/
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+  - SOAP
+  properties:
+  - type: WSDL
+    url: wsdl/iress-webservices-v4-iress.wsdl
+  - type: WSDL
+    url: wsdl/iress-webservices-v4-iosplus.wsdl
+  - type: WSDL
+    name: WSDL (provider-hosted, IRESS)
+    url: https://raw.githubusercontent.com/iress/webservices-v4-docs/main/samples/C%23/iosplus-download/WebServices/Iress.wsdl
+  - type: WSDL
+    name: WSDL (provider-hosted, IOS+)
+    url: https://raw.githubusercontent.com/iress/webservices-v4-docs/main/samples/C%23/iosplus-download/WebServices/IosPlus.wsdl
+  - type: Documentation
+    url: https://webservices.iress.com.au/v4/
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website and link pointers fetched 2026-10-21; QuantFeed page 404 (divested with QuantHouse to BAHA), API
+    entries replaced with live Iress API pages. Divestiture per web search (financialnewswire.com.au, tipranks.com),
+    not fetched.
+  evidence:
+  - url: https://www.iress.com/
+    status: 200
+  - url: https://www.iress.com/software/trading-and-market-data/api-data-trading-solutions/quantfeed/
+    status: 404
+  - url: https://www.iress.com/software/sourcing/apis-and-integrations/
+    status: 200
+  - url: https://www.iress.com/software/financial-advice/xplan-integrations/
+    status: 200
+  - url: https://www.linkedin.com/company/iress
+    status: 999
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 16
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

@@ -1,0 +1,49 @@
+generated: '2026-10-21'
+method: searched
+source:
+- https://api.iressopen.com.au/swagger/3.0/swagger.json
+format: custom-json
+envelope:
+  schema: IressOpen.API.Common.Models.MessageResponseModel
+  fields:
+    StatusCode: System.Net.HttpStatusCode name (e.g. "BadRequest")
+    Message: string
+  example:
+    StatusCode: BadRequest
+    Message: string
+note: 'Statuses and titles are the response descriptions in the Iress Open 3.0 Swagger contract (400/401/403/404/409/502
+  on all 152 operations; 413/415 on 2). No separate error reference page was found. Support guidance: quote x-Iress-RequestId
+  (or x-amz-apigw-id / x-amzn-RequestId if it was not returned) when reporting an error.'
+problems:
+- status: 400
+  title: Bad Request
+  type: BadRequest
+  description: Response "Bad Request" with MessageResponseModel StatusCode "BadRequest".
+- status: 401
+  title: Unauthorized
+  type: Unauthorized
+  description: Response "Unauthorized" with MessageResponseModel StatusCode "Unauthorized".
+- status: 403
+  title: Forbidden
+  type: Forbidden
+  description: Response "Forbidden" with MessageResponseModel StatusCode "Forbidden".
+- status: 404
+  title: Not Found
+  type: NotFound
+  description: Response "Not Found" with MessageResponseModel StatusCode "NotFound".
+- status: 409
+  title: Conflict
+  type: Conflict
+  description: Response "Conflict" with MessageResponseModel StatusCode "Conflict".
+- status: 413
+  title: Request Entity Too Large
+  type: RequestEntityTooLarge
+  description: Response "Request Entity Too Large" with MessageResponseModel StatusCode "RequestEntityTooLarge".
+- status: 415
+  title: Unsupported Media Type
+  type: UnsupportedMediaType
+  description: Response "Unsupported Media Type" with MessageResponseModel StatusCode "UnsupportedMediaType".
+- status: 502
+  title: XPLAN Unavailable
+  type: BadGateway
+  description: Response "XPLAN Unavailable" with MessageResponseModel StatusCode "BadGateway".

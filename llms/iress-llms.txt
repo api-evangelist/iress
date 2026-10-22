@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<!-- The page is the error page displayed when ACS and CADB cannot be contacted in order
+to determine the IRESS product versions accessible to the client.
+
+This page displays instead of the help in this scenario
+Styles are loosely based on a few styles the MadCap Flare skin (Styles.css in the Output),
+with some modifications to make them work outside the skin and all the supporting files.
+
+The IRESS-Transparent.png image is required. This logo is also used in the help skin.
+ -->
+<html>
+
+<head>
+<meta charset="UTF-8" />
+<title>IRESS Pro Help - Error</title>
+<style type="text/css">
+html,
+body
+{
+	height: 100%;
+}
+
+html
+{
+	overflow: hidden;
+	/* IE 7: without this, IE 7 displays a scrollbar */
+}
+
+body
+{
+	font-family: Arial;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	background: white none;
+	color: black;
+}
+
+#header
+{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	/* IE7 z-index bug: positioned elements (#header) generate a new stacking context starting with a z-index value of 0. This causes .search-filter-content's z-index not to work. So set #header's z-index (don't really need to set .search-filter-content's z-index but we'll leave it). http://www.quirksmode.org/bugreports/archives/2006/01/Explorer_z_index_bug.html */
+	display: block;
+	height: 60px;
+	background: #222e40 none;
+	color: white;
+}
+
+#header .logo
+{
+	position: absolute;
+	top: 50%;
+	display: block;
+	height: 28px;
+	margin-top: -14px;
+}
+
+#body
+{
+	position: absolute;
+	top: 90px;
+	background-color: #FFF;
+	right: 9px;
+	bottom: 0;
+	left: 20px;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+
+}
+span.logo
+{
+width: 96px;
+margin-left: 20px;
+background: url('IRESS_Transparent.png') no-repeat center left;
+}
+
+h1.logo
+{
+	position: absolute;
+	top: 50%;
+	margin-left: 138px;
+	width: 100%;
+	display: block;
+	height: 28px;
+	margin-top: -14px;
+	font-size: 18pt;
+}
+
+p, ol, li 
+{
+font-family: Verdana, Helvetica, sans-serif;
+color: black;
+font-size: 13px;
+}
+
+</style>
+
+</head>
+<body>
+			<div id="header">
+					 <span class="logo"></span>
+					 <h1 class="logo">An error has occurred</h1>
+			</div>
+			<div id="body">
+					 <p>There was a problem accessing the help for your IRESS suite of products. Please try again shortly.</p>
+					 <p>If the problem persists, please contact your IRESS Account Executive.</p>
+					 <p>If you have reached this page by clicking on a hyperlink, for example in an email, please try the following:</p>
+					 <ol>
+					 		 <li>Open IRESS Pro.</li>
+							 <li>Select <b>Help > Contents</b> or press <b>F1</b>.</li>
+							 <li>Copy the link and paste it into the address bar of the browser you just opened.</li>
+					 </ol>
+			</div>
+</body>
+</html>

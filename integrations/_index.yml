@@ -37,3 +37,40 @@
   relationship: connector-coverage
   status: not-a-workflow
   arazzo: null
+- slug: iress-suitebox
+  label: SuiteBox
+  partner_name: SuiteBox
+  category: video conferencing
+  type: claimed
+  channel: custom-integration
+  evidence: https://www.iress.com/software/financial-advice/xplan-integrations/
+  source: edge
+  status: pending-partner-spec
+  arazzo: null
+- slug: iress-microsoft
+  label: Microsoft
+  partner_name: Microsoft
+  type: claimed
+  channel: custom-integration
+  evidence: https://www.iress.com/software/financial-advice/xplan-integrations/
+  source: edge
+  status: pending-partner-spec
+  arazzo: null
+- slug: iress-google-maps
+  label: Google Maps
+  partner_name: Google Maps
+  type: claimed
+  channel: custom-integration
+  evidence: https://www.iress.com/software/financial-advice/xplan-integrations/
+  source: edge
+  status: pending-partner-spec
+  arazzo: null
+- slug: iress-fujixerox
+  label: FujiXerox
+  partner_name: FujiXerox
+  type: claimed
+  channel: custom-integration
+  evidence: https://www.iress.com/software/financial-advice/xplan-integrations/
+  source: edge
+  status: pending-partner-spec
+  arazzo: null

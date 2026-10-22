@@ -1,3 +1,37 @@
+generated: '2026-10-21'
+method: searched
+source:
+- https://www.skills.sh/sitemap.xml
+- https://www.iress.com/software/financial-advice/xplan-integrations/
+- https://zapier.com/apps/iress/integrations
+- https://n8n.io/integrations/iress/
+- https://composio.dev/toolkits/iress
+- https://monid.ai/tools/iress
+checked:
+- https://api.github.com
+- https://claude-plugins.dev/sitemap.xml
+- https://github.com/VoltAgent/awesome-agent-skills
+- https://officialskills.sh/sitemap.xml
+- https://skillsmp.com/sitemap.xml
+- https://www.skills.sh/sitemap.xml
+- https://brokercheck.finra.org/
+- https://ilpa.org/about-ilpa/member-directory/
+- https://ilpa.org/industry-guidance/templates-standards-model-documents/ilpa-templates-hub/template-endorsers/
+- https://ilpa.org/members
+- https://ilpa.org/wp-json/wp/v2/organization
+- https://www.cboe.com/market_data_services/vendors/
+- https://www.fixtrading.org/members/
+- https://www.sec.gov/foia/docs/form-adv-archive-data
+- https://www.iress.com/software/financial-advice/xplan-integrations/
+- https://community.iress.com/ic/categories/xplan-integration-introduction
+- https://community.iress.com/ic/discussion/102960/iress-open-standard-overview
+- https://api.iressopen.com.au/swagger/3.0/swagger.json
+- https://composio.dev/toolkits/iress
+- https://monid.ai/tools/iress
+- https://n8n.io/integrations/iress/
+- https://zapier.com/apps/iress/integrations
+summary: null
+marketplace_apps: []
 edges:
 - partner_name: skills.sh
   partner: null
@@ -48,22 +82,41 @@ edges:
     states no conformance test, so no certified_products
   detected_by: sweep-private-markets-fund-admin.py
   first_seen: '2026-10-20'
-generated: '2026-10-20'
-method: searched
-source:
-- https://www.skills.sh/sitemap.xml
-checked:
-- https://api.github.com
-- https://claude-plugins.dev/sitemap.xml
-- https://github.com/VoltAgent/awesome-agent-skills
-- https://officialskills.sh/sitemap.xml
-- https://skillsmp.com/sitemap.xml
-- https://www.skills.sh/sitemap.xml
-- https://brokercheck.finra.org/
-- https://ilpa.org/about-ilpa/member-directory/
-- https://ilpa.org/industry-guidance/templates-standards-model-documents/ilpa-templates-hub/template-endorsers/
-- https://ilpa.org/members
-- https://ilpa.org/wp-json/wp/v2/organization
-- https://www.cboe.com/market_data_services/vendors/
-- https://www.fixtrading.org/members/
-- https://www.sec.gov/foia/docs/form-adv-archive-data
+- partner_name: SuiteBox
+  partner: null
+  type: claimed
+  direction: unknown
+  channel: custom-integration
+  evidence: https://www.iress.com/software/financial-advice/xplan-integrations/
+  quote: We have a rich history of building custom integrations with third-party providers such as SuiteBox for
+    video conferencing through to large providers such as Microsoft, Google Maps and FujiXerox.
+  first_seen: '2026-10-21'
+  category: video conferencing
+- partner_name: Microsoft
+  partner: null
+  type: claimed
+  direction: unknown
+  channel: custom-integration
+  evidence: https://www.iress.com/software/financial-advice/xplan-integrations/
+  quote: We have a rich history of building custom integrations with third-party providers such as SuiteBox for
+    video conferencing through to large providers such as Microsoft, Google Maps and FujiXerox.
+  first_seen: '2026-10-21'
+- partner_name: Google Maps
+  partner: null
+  type: claimed
+  direction: unknown
+  channel: custom-integration
+  evidence: https://www.iress.com/software/financial-advice/xplan-integrations/
+  quote: We have a rich history of building custom integrations with third-party providers such as SuiteBox for
+    video conferencing through to large providers such as Microsoft, Google Maps and FujiXerox.
+  first_seen: '2026-10-21'
+- partner_name: FujiXerox
+  partner: null
+  type: claimed
+  direction: unknown
+  channel: custom-integration
+  evidence: https://www.iress.com/software/financial-advice/xplan-integrations/
+  quote: We have a rich history of building custom integrations with third-party providers such as SuiteBox for
+    video conferencing through to large providers such as Microsoft, Google Maps and FujiXerox.
+  first_seen: '2026-10-21'
+templates: []

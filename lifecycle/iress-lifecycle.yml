@@ -1,0 +1,41 @@
+generated: '2026-10-21'
+method: searched
+source:
+- https://api.iressopen.com.au/swagger/index.js
+- https://api.iressopen.co.uk/swagger/index.js
+- https://api.iressopen.com.au/swagger/3.0/swagger.json
+- https://webservices.iress.com.au/v4/
+versioning:
+  scheme: major.minor via x-api-version request header
+  current: '3.0'
+  versions:
+  - version: '3.0'
+    status: current
+    regions:
+    - AU
+    - SA
+    - UK
+  - version: '2.0'
+    status: deprecated
+    label: 2.0 (DEPRECATED)
+    regions:
+    - AU
+    - SA
+    - UK
+  - version: '1.0'
+    status: deprecated
+    label: 1.0 (DEPRECATED)
+    regions:
+    - AU
+deprecation:
+  policy: null
+  note: Deprecation is signalled only by the "(DEPRECATED)" label on the 2.0 and 1.0 Swagger definitions; no deprecation
+    policy, sunset date or Sunset/Deprecation headers were found. No operation in 3.0 is marked deprecated.
+legacy_apis:
+- name: IRESS Web Services Version 4 (SOAP, document/literal)
+  docs: https://webservices.iress.com.au/v4/
+  note: Page footer reads Copyright (C) 2009 IRESS Market Technology; Method Reference and Programmer's Guide require
+    IRESS credentials.
+status_page: null
+status_page_note: No public API status page found on the documented hosts.
+sla: null

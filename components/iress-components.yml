@@ -1,0 +1,30 @@
+generated: '2026-10-21'
+method: searched
+source:
+- https://github.com/iress/design-system
+- https://registry.npmjs.org/@iress-oss/ids-components
+description: 'Iress Design System (IDS): the shared React component library for Iress products, published as open
+  source (Apache-2.0) under the @iress-oss npm scope. It is a UI kit for building Iress-styled interfaces, not an
+  embeddable hosted surface of the Iress APIs.'
+docs: https://main--691abcc79dfa560a36d0a74f.chromatic.com
+libraries:
+- name: '@iress-oss/ids-components'
+  framework: react
+  version: 6.4.2
+- name: '@iress-oss/ids-tokens'
+  kind: design-tokens
+  version: 6.0.0
+- name: '@iress-oss/ids-theme-preset'
+  kind: panda-css-preset
+  version: 6.0.1
+families:
+  ids-components:
+    description: React components that implement the Iress Design System, documented in Storybook (Chromatic).
+    components: []
+  ai-tooling:
+    description: '@iress-oss/ids-mcp-server: Model Context Protocol (MCP) server for the IDS component library,
+      for AI assistants.'
+    components:
+    - name: ids-mcp-server
+      package: '@iress-oss/ids-mcp-server'
+note: Individual component names were not enumerated; the Storybook docs site was not read.

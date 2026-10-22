@@ -1,0 +1,69 @@
+name: Iress MCP Server (candidate)
+type: MCPServer
+generated: '2026-10-21'
+method: derived
+status: candidate
+description: >-
+  No official Iress MCP server (remote or local) was found. Searches for an Iress / Xplan MCP server returned
+  nothing provider-specific, the pre-flight dossier recorded mcp absent on www.iress.com, help.iress.com,
+  community.iress.com and api.iress.com, and Iress publishes no OpenAPI. This candidate tool list is DERIVED
+  from the operation names in the two provider-published Iress Web Services V4 SOAP WSDLs saved under wsdl/.
+  Session operations (IRESSSessionStart/End, ServiceSessionStart/End, SessionRequestEnd, SessionTicketCreate)
+  are authentication plumbing and are not proposed as tools.
+source:
+- wsdl/iress-webservices-v4-iress.wsdl
+- wsdl/iress-webservices-v4-iosplus.wsdl
+- https://raw.githubusercontent.com/iress/webservices-v4-docs/main/samples/C%23/iosplus-download/WebServices/Iress.wsdl
+- https://raw.githubusercontent.com/iress/webservices-v4-docs/main/samples/C%23/iosplus-download/WebServices/IosPlus.wsdl
+deployment:
+  mode: none
+  auth: unknown
+  verified: derived
+backing_api:
+  name: Iress Web Services V4
+  protocol: SOAP 1.1 document/literal
+  baseURL: https://webservices.iress.com.au/v4/SOAP.aspx
+  auth_note: Calls require an IRESS session established via IRESSSessionStart / ServiceSessionStart (per WSDL); credentials are issued by Iress.
+tools:
+- name: security_information_get
+  soap_operation: SecurityInformationGet
+  wsdl: wsdl/iress-webservices-v4-iress.wsdl
+  description: Retrieve security information (market data reference) for one or more securities.
+  readOnly: true
+- name: order_search_get_by_order_number
+  soap_operation: OrderSearchGetByOrderNumber
+  wsdl: wsdl/iress-webservices-v4-iosplus.wsdl
+  description: Look up IOS+ orders by order number.
+  readOnly: true
+- name: order_search_get_by_user
+  soap_operation: OrderSearchGetByUser
+  wsdl: wsdl/iress-webservices-v4-iosplus.wsdl
+  description: Search IOS+ orders placed by a user.
+  readOnly: true
+- name: trade_get_by_user
+  soap_operation: TradeGetByUser
+  wsdl: wsdl/iress-webservices-v4-iosplus.wsdl
+  description: Retrieve IOS+ trades for a user.
+  readOnly: true
+- name: audit_trail_get_by_order_number
+  soap_operation: AuditTrailGetByOrderNumber
+  wsdl: wsdl/iress-webservices-v4-iosplus.wsdl
+  description: Retrieve the audit trail for an order by order number.
+  readOnly: true
+- name: audit_trail_get_by_user
+  soap_operation: AuditTrailGetByUser
+  wsdl: wsdl/iress-webservices-v4-iosplus.wsdl
+  description: Retrieve the order audit trail for a user.
+  readOnly: true
+- name: server_time_zone_get
+  soap_operation: ServerTimeZoneGet
+  wsdl: wsdl/iress-webservices-v4-iosplus.wsdl
+  description: Get the IOS+ server time zone.
+  readOnly: true
+excluded_operations:
+- {operation: IRESSSessionStart, reason: session/authentication}
+- {operation: IRESSSessionEnd, reason: session/authentication}
+- {operation: ServiceSessionStart, reason: session/authentication}
+- {operation: ServiceSessionEnd, reason: session/authentication}
+- {operation: SessionRequestEnd, reason: session/authentication}
+- {operation: SessionTicketCreate, reason: session/authentication}
