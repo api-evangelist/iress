@@ -1,4 +1,4 @@
-# Iress (iress)
+# Iress
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,47 +64,111 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Iress is a technology company providing software for financial markets, wealth management, and trading. Iress QuantFeed is a signature end-to-end ultra-low latency market data API that connects over 240 normalized market data feeds from 80+ sources.
+Iress is a technology company providing software to the financial services industry, used by more than 10,000 businesses and 500,000 users. Its products span financial advice (Xplan and Xplan Integrations), trading and market data (Iress Pro, Viewpoint, FIX, order and institutional trading systems, real-time market data from 100+ markets), investment management, and UK mortgage and protection sourcing (The Exchange, Xplan Mortgage, Trigold), whose Sourcing APIs let platforms integrate Iress sourcing data. Iress sold its QuantHouse business (QuantFeed market data API) to BAHA Tech Holding AG, and the former QuantFeed page on iress.com now returns 404.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/iress/refs/heads/main/apis.yml)
+**Areas:** Financial Data · Market Data · Trading · Wealth Management · Financial Advice · Mortgages · Insurance · FinTech
 
-## Scope
+## Iress on APIs.io
 
-- **Type:** Index 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+Everything profiled for Iress is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/iress/](https://apis.io/providers/iress/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### APIs (3)
 
- - Financial Data, Market Data, Trading, Wealth Management
+- [Iress Sourcing APIs](https://apis.io/apis/iress/iress-sourcing-apis/) — Iress Sourcing APIs bring the UK mortgage and protection sourcing data behind The Exchange, Xplan Mortgage and Trigold directly into a CRM, platform or…
+- [Xplan Integrations](https://apis.io/apis/iress/xplan-integrations/) — Xplan Integrations connect Iress Xplan financial advice software to third-party applications, either through standard integrations that use an app key with…
+- [Iress Web Services V4](https://apis.io/apis/iress/iress-web-services-v4/) — Iress Web Services V4 is a SOAP XML document/literal web service used to access IRESS market data and Web Admin, IOS+ (Iress Order Management System), IPS…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-02-12 
-- **Modified:** 2026-04-28 
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (2)
 
-### Iress QuantFeed
-QuantFeed is Iress's signature end-to-end ultra-low latency market data API. Built to deliver an unmatched level of performance and quality of normalisation, QuantFeed connects 240+ normalised market data feeds from 80+ sources.
+Authentication, trust centre, and vulnerability disclosure.
 
-**Human URL:** [https://www.iress.com/software/trading-and-market-data/api-data-trading-solutions/quantfeed/](https://www.iress.com/software/trading-and-market-data/api-data-trading-solutions/quantfeed/)
+- [Iress Authentication](https://apis.io/security/iress/iress-authentication/)
+- [Iress Domain Security](https://apis.io/security/iress/iress-domain-security/)
 
+#### Plans and pricing (1)
 
-#### Tags:
+Published plans, tiers and prices.
 
- - Market Data, Financial Data, Trading
+- [Iress Plans Pricing](https://apis.io/plans/iress/iress-plans-pricing/)
 
-#### Properties
+#### Rate limits (1)
 
-- [Documentation](https://www.iress.com/software/trading-and-market-data/api-data-trading-solutions/quantfeed/)
+Published request limits.
 
-## Common Properties
+- [Iress Rate Limits](https://apis.io/rate-limits/iress/iress-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Iress Finops](https://apis.io/finops/iress/iress-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.iress.com/)
+- [Documentation](https://help.iress.com/)
+- [Support](https://www.iress.com/support/software-support/)
+- [Blog](https://www.iress.com/blog/)
+- [Trust centre](https://www.iress.com/trust/)
+- [Terms of service](https://www.iress.com/trust/website-terms/)
+- [Privacy policy](https://www.iress.com/resources/legal/privacy/)
+- [GitHub](https://github.com/iress)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 23.9** — emerging · rubric 0.24.0 · scored 2026-10-21
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 16.4 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 42.1 |
+
+**Agent readiness 13.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 26.3** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/iress/](https://apis.io/providers/iress/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Iress: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/iress/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
